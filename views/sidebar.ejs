@@ -1,0 +1,138 @@
+<% include partials/header %>
+
+
+
+
+<div class="row" id="myUL">
+<div class="col-md-4">
+<div class="panel-body">
+    <form id="search-members-form">
+      <input type="text" id="search-members-input" style="margin-bottom: 10px; border-radius: 3px;" placeholder="Election Participants" class="form-control "  onkeyup="myFunction()" id="myInput" >
+      
+    </form>
+    
+
+
+    <script>
+    var searchMembersRoute = "http://kampasi.com/tools/search-members";
+    var membersLoading = "http://kampasi.com/src/img/loading/rolling.gif";
+    </script>
+
+    <style>
+    #style-1::-webkit-scrollbar-track
+    {
+      border-radius: 10px;
+      background-color: #bdc3c7;
+    }
+
+    #style-1::-webkit-scrollbar
+    {
+      width: 8px;
+      background-color: #F5F5F5;
+    }
+
+    #style-1::-webkit-scrollbar-thumb
+    {
+      border-radius: 10px;
+      background-color: #555;
+    }
+
+    </style>
+    <ul class="list-unstyled" id="style-1" style="overflow-y: auto; overflow-x: hidden; height: 400px;">
+                <li>
+        <div class="row">
+          <div class="col-xs-2">
+            <img class="img-circle" style="width: 50px; height: 50px;" src="/media/Gerry Migwi.jpg">
+          </div><!-- .col-md-4 -->
+          <div class="col-xs-8" style="text-align: left;">
+            <a href="http://kampasi.com/sriddle22">Mwangi</a>
+                            <p>i wish i was a little taller i wish...</p>
+          </div><!-- .col-md-8 -->
+        </div><!-- .row -->
+        <hr>
+      </li>
+                <li>
+        <div class="row">
+          <div class="col-xs-2">
+            <img class="img-circle" style="width: 50px; height: 50px;" src="/media/Gerry Migwi.jpg">
+          </div><!-- .col-md-4 -->
+          <div class="col-xs-8" style="text-align: left;">
+            <a href="http://kampasi.com/Nonhlanhla">Gerry</a>
+                            <p>i wish i was a little taller i wish...</p>
+          </div><!-- .col-md-8 -->
+        </div><!-- .row -->
+        <hr>
+      </li>
+                <li>
+        <div class="row">
+          <div class="col-xs-2">
+            <img class="img-circle" style="width: 50px; height: 50px;" src="/media/Gerry Migwi.jpg">
+          </div><!-- .col-md-4 -->
+          <div class="col-xs-8" style="text-align: left;">
+            <a href="http://kampasi.com/bkelley@africanleadershipacademy.org">Gerry</a>
+                            <p>i wish i was a little taller i wish...</p>
+          </div><!-- .col-md-8 -->
+        </div><!-- .row -->
+        <hr>
+      </li>
+                <li>
+        <div class="row">
+          <div class="col-xs-2">
+            <img class="img-circle" style="width: 50px; height: 50px;" src="/media/Gerry Migwi.jpg">
+          </div><!-- .col-md-4 -->
+          <div class="col-xs-8" style="text-align: left;">
+            <a href="http://kampasi.com/Munir">Gerry</a>
+                            <p>i wish i was a little taller i wish...</p>
+          </div><!-- .col-md-8 -->
+        </div><!-- .row -->
+        <hr>
+      </li>
+                <li>
+        <div class="row">
+          <div class="col-xs-2">
+            <img class="img-circle" style="width: 50px; height: 50px;" src="/media/Gerry Migwi.jpg">
+          </div><!-- .col-md-4 -->
+          <div class="col-xs-8" style="text-align: left;">
+            <a href="http://kampasi.com/Mahomed%20Omar">Gerry</a>
+                            <p>i wish i was a little taller i wish...</p>
+          </div><!-- .col-md-8 -->
+        </div><!-- .row -->
+        <hr>
+      </li>
+               
+               
+                
+                
+    
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("search-members-input");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+
+
+
+  <% include partials/footer %>

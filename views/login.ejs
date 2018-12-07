@@ -1,0 +1,201 @@
+<% include partials/header_login %>
+    
+    <!--Main Navigation-->
+    <header>
+
+        <%include partials/landing_navigation%>
+
+        <!--Intro Section-->
+        <section class="view intro-2 hm-gradient hm-indigo-slight">
+            <div class="full-bg-img">
+                <div class="container flex-center">
+
+                    <!--Grid row-->
+                    <div class="row  pt-5 mt-3">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+
+                            <!-- <% if(success && success.length > 0){ %>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                  <strong>Woo Hoo!</strong> <%= success %>
+                                </div>
+                            <% } %>
+                            <% if(error && error.length > 0){ %>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                  <strong>Bummer!</strong> <%= error %>
+                                </div>
+                            <% } %> -->
+
+                            <div class="mt-3 pt-3 card">
+                                <div class="card-body">
+                                    
+                                    <h2 class="feature-title text-center mb-5 mt-4 font-bold"><strong>Decentralized Feedback system</strong></h2>
+                                    <hr>
+
+                                    <!--Grid row-->
+                                    <div class="row mt-5">
+
+                                        <!--Grid column-->
+                                        <div class="col-md-6 ml-lg-5 ml-md-3 features-small">
+
+                                            <!--Grid row-->
+                                            <div class="row pb-3">
+                                                <div class="col-2 col-lg-1">
+                                                    <i class="fa fa-bank indigo-text fa-lg"></i>
+                                                </div>
+                                                <div class="col-10">
+                                                    <h4 class="feature-title"><strong>Decentralized Feedback</strong></h4>
+                                                    <p class="dark-grey-text">No central server.</p>
+                                                </div>
+                                            </div>
+                                            <!--Grid row-->
+
+                                            <!--Grid row-->
+                                            <div class="row pb-3">
+                                                <div class="col-2 col-lg-1">
+                                                    <i class="fa fa-desktop deep-purple-text fa-lg"></i>
+                                                </div>
+                                                <div class="col-10">
+                                                    <h4 class="feature-title"><strong>Accountability</strong></h4>
+                                                    <p class="dark-grey-text">Every students is accountable held accountable</p>
+                                                </div>
+                                            </div>
+                                            <!--Grid row-->
+
+                                            <!--Grid row-->
+                                            <div class="row pb-4">
+                                                <div class="col-2 col-lg-1">
+                                                    <i class="fa fa-money purple-text fa-lg"></i>
+                                                </div>
+                                                <div class="col-10">
+                                                    <h4 class="feature-title"><strong>Track your feedback</strong></h4>
+                                                    <p class="dark-grey-text">Get a hash, track your feedback to specific teachers and check the screen to see your feedback sent to teachers.</p>
+                                                </div>
+                                            </div>
+                                            <!--Grid row-->
+
+                                        </div>
+                                        <!--Grid column-->
+
+                                        <!--Grid column-->
+                                        <div class="col-md-5">
+                                            
+                                            <ul class="nav md-pills nav-justified pills-primary">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" data-toggle="tab" href="#login" role="tab">Login</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="tab" href="#register" role="tab">Register</a>
+                                            </li>
+                                        </ul>
+
+                                        <!-- Tab panels -->
+                                        <div class="tab-content">
+
+                                            <!--Panel 1-->
+                                            <div class="tab-pane fade in show active" id="login" role="tabpanel">
+                                    
+                                                <!--Body-->
+                                                <form action="/login" method="POST">
+                                                <div class="md-form">
+                                                    <i class="fa fa-user prefix dark-grey-text"></i>
+                                                    <input type="text" name="name" id="orangeForm-name" class="form-control" required>
+                                                    <label for="orangeForm-name">Your name</label>
+                                                </div>
+                                                <div class="md-form">
+                                                    <i class="fa fa-envelope prefix dark-grey-text"></i>
+                                        
+                                                    <input type="text" name="username" id="orangeForm-email" class="form-control" required>
+                                                    
+                                                    <label for="orangeForm-email">Your email</label>
+                                                </div>
+
+                                                <div class="md-form">
+                                                    <i class="fa fa-lock prefix dark-grey-text"></i>
+                                                    <input type="password" name="password" id="orangeForm-pass" class="form-control" required>
+                                                    <label for="orangeForm-pass">Your password</label>
+                                                </div>
+
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn-indigo btn-rounded mt-3">Login</button>
+                                                </div>
+                                                </form>
+                                            </div>
+                                            <!--/.Panel 1-->
+
+                                            <!--Panel 2-->
+                                            <div class="tab-pane fade" id="register" role="tabpanel">
+
+                                                <form action="/register" method="POST">
+                                                <!--Body-->
+                                                <div class="md-form">
+                                                    <i class="fa fa-user prefix dark-grey-text"></i>
+                                                    <input name="name" type="text" id="orangeForm-name" class="form-control" required>
+                                                    <label for="orangeForm-name">Your name</label>
+                                                </div>
+                                                
+                                                <div class="md-form">
+                                                    <i class="fa fa-envelope prefix dark-grey-text"></i>
+                                        
+                                                    <input type="text" name="username" id="orangeForm-email" class="form-control" required>
+                                                    
+                                                    <label for="orangeForm-email">Your email (ALA email)</label>
+                                                </div>
+
+                                                <div class="md-form">
+                                                    <i class="fa fa-lock prefix dark-grey-text"></i>
+                                                    <input type="password" name="password" id="orangeForm-pass" class="form-control" required>
+                                                    <label for="orangeForm-pass">Your password</label>
+                                                </div>
+
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn-indigo btn-rounded mt-3">Sign up</button>
+                                                </div>
+                                                </form>
+                                            </div>
+                                            <!--/.Panel 2-->
+
+                                        </div>
+
+                                        </div>
+                                        <!--Grid column-->
+
+                                    </div>
+                                    <!--Grid row-->
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                </div>
+            </div>
+        </section>
+
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main Layout-->
+    <main>
+
+        <div class="container">
+
+
+
+        </div>
+
+    </main>
+    <!--Main Layout-->
+
+<%include partials/footer%>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta property="og:image" content="/media/abi_logo.png" />
+
+        <title>Decentralized Voting System</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Material Design Bootstrap -->
+        <link href="/css/mdb.min.css" rel="stylesheet">
+        
+        <!-- Datatables -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css" rel="stylesheet">
+
+        <!-- Custom styles -->
+        <link href="/css/style.css" rel="stylesheet">
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Pagination -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.2/pagination.css" rel="stylesheet">
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/media/favicon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+
+        <div class="row container">
+        <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <% if(success && success.length > 0){ %>
+                    <div class="my-5 alert alert-success alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>Woo Hoo!</strong> <%= success %>
+                    </div>
+                <% } %>
+                <% if(error && error.length > 0){ %>
+                    <div class="my-5 alert alert-danger alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>Bummer!</strong> <%= error %>
+                    </div>
+                <% } %>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+
+
+        

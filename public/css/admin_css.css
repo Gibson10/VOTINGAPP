@@ -1,0 +1,79 @@
+main {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.extra-margins {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+.navbar {
+    background-color: #3b295a;
+}
+
+footer.page-footer {
+    background-color: #3b295a;
+    margin-top: 2rem;
+}
+.navbar .btn-group .dropdown-menu a:hover {
+    color: #000 !important;
+}
+.navbar .btn-group .dropdown-menu a:active {
+    color: #fff !important;
+}
+
+.fa-social {
+    color: white;
+}
+
+.fa-facebook:hover{
+    color: #3b5998;
+}
+
+.fa-twitter:hover{
+    color: #0084b4;
+}
+
+.fa-google-plus:hover{
+    color: #d34836;
+}
+
+.fa-linkedin:hover{
+    color: #0077B5;
+}
+
+.span-free {
+    margin-left: 35px;
+    white-space:nowrap;
+}
+
+.form-elegant .font-small {
+  font-size: 0.8rem; }
+
+.form-elegant .z-depth-1a {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+  box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }
+
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+  -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
+
+.img-fluid, .modal-dialog.cascading-modal.modal-avatar .modal-header, .comments-list img, .reply-form img, .section-blog-fw .view img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+}
+
+.card-title-color {
+    color: black;
+}
+
+.card-text-p {
+    display: inline;
+}

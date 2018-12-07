@@ -1,0 +1,671 @@
+<% include partials/hh_header %>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-12 my-3">
+            
+        </div>
+    </div>
+    <div class="row">
+        <!-- Voting Panel Dropdown -->
+        <div class="col-md-4">
+            <div class="card text-center">
+                <form action="/vote/submit/<%=currentUser._id%>" method="POST">
+                    <div class="card-body">
+                    <h6 class="card-title ml-3 mt-3">Country</h6>
+                    <div class="md-form mt-3">
+                        <select class="mdb-select colorful-select dropdown-primary" name="country" required>
+                            <option value="algeria">Algeria</option>
+                            <option value="angola">Angola</option>
+                            <option value="benin">Benin</option>
+                            <option value="botswana">Botswana</option>
+                            <option value="burkina Faso">Burkina Faso</option>
+                            <option value="burundi">Burundi</option>
+                            <option value="cameroon">Cameroon</option>
+                            <option value="cape-verde">Cape Verde</option>
+                            <option value="central-african-republic">Central African Republic</option>
+                            <option value="chad">Chad</option>
+                            <option value="comoros">Comoros</option>
+                            <option value="congo-brazzaville">Congo - Brazzaville</option>
+                            <option value="congo-kinshasa">Congo - Kinshasa</option>
+                            <option value="ivory-coast">Côte d’Ivoire</option>
+                            <option value="djibouti">Djibouti</option>
+                            <option value="egypt">Egypt</option>
+                            <option value="equatorial-guinea">Equatorial Guinea</option>
+                            <option value="eritrea">Eritrea</option>
+                            <option value="ethiopia">Ethiopia</option>
+                            <option value="gabon">Gabon</option>
+                            <option value="gambia">Gambia</option>
+                            <option value="ghana">Ghana</option>
+                            <option value="guinea">Guinea</option>
+                            <option value="guinea-bissau">Guinea-Bissau</option>
+                            <option value="kenya">Kenya</option>
+                            <option value="lesotho">Lesotho</option>
+                            <option value="liberia">Liberia</option>
+                            <option value="libya">Libya</option>
+                            <option value="madagascar">Madagascar</option>
+                            <option value="malawi">Malawi</option>
+                            <option value="mali">Mali</option>
+                            <option value="mauritania">Mauritania</option>
+                            <option value="mauritius">Mauritius</option>
+                            <option value="mayotte">Mayotte</option>
+                            <option value="morocco">Morocco</option>
+                            <option value="mozambique">Mozambique</option>
+                            <option value="namibia">Namibia</option>
+                            <option value="niger">Niger</option>
+                            <option value="nigeria">Nigeria</option>
+                            <option value="rwanda">Rwanda</option>
+                            <option value="reunion">Réunion</option>
+                            <option value="saint-helena">Saint Helena</option>
+                            <option value="senegal">Senegal</option>
+                            <option value="seychelles">Seychelles</option>
+                            <option value="sierra-leone">Sierra Leone</option>
+                            <option value="somalia">Somalia</option>
+                            <option value="south-africa">South Africa</option>
+                            <option value="sudan">Sudan</option>
+                            <option value="south-sudan">Sudan</option>
+                            <option value="swaziland">Swaziland</option>
+                            <option value="Sao-tome-príncipe">São Tomé and Príncipe</option>
+                            <option value="tanzania">Tanzania</option>
+                            <option value="togo">Togo</option>
+                            <option value="tunisia">Tunisia</option>
+                            <option value="uganda">Uganda</option>
+                            <option value="western-sahara">Western Sahara</option>
+                            <option value="zambia">Zambia</option>
+                            <option value="zimbabwe">Zimbabwe</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label>Country</label>
+                    </div>
+
+                    <h6 class="card-title ml-3 mt-3">Hall</h6>
+                    <div class="md-form mt-3">
+                        <select class="mdb-select colorful-select dropdown-primary" name="hall" required>
+                            <option value="Athena">Athena</option>
+                            <option value="Classified">Classified</option>
+                            <option value="Gaga">Gaga</option>
+                            <option value="Jeshi">Jeshi</option>
+                            <option value="Keza">Keza</option>
+                            <option value="Kushinga">Kushinga</option>
+                            <option value="Malaika">Malaika</option>
+                            <option value="Office">Office</option>
+                            <option value="Olympus">Olympus</option>
+                            <option value="Titans">Titans</option>
+                            <option value="Twawana">Twawana</option>
+                            <option value="Valkyrie">Valkyrie</option>
+                        </select>
+                        <label>Hall</label>
+                    </div>
+
+                    <h6 class="card-title ml-3 mt-3">Chairman</h6>
+                    <div class="md-form mt-3">
+                        <select class="mdb-select colorful-select dropdown-primary" name="chairman" required>
+                            <option value="No Candidate">No Candidate</option>
+                            <option value="Henry Victor">Henry Victor</option>
+                            <option value="Adnan Kaka Shafi">Adnan Kaka Shafi</option>
+                            <option value="Rolinhlanhla Zinyemba">Rolinhlanhla Zinyemba</option>
+                            <option value="Jimcale">Jimcale</option>
+                        </select>
+                        <label>Chairman</label>
+                    </div>
+
+                    <!-- <h6 class="card-title ml-3 mt-3">Chairlady</h6>
+                    <div class="md-form mt-3">
+                        <select class="mdb-select colorful-select dropdown-primary" name="chairlady" required>
+                            <option value="No Candidate">No Candidate</option>
+                            <option value="Tania Twinoburyo">Tania Twinoburyo</option>
+                        </select>
+                        <label>Chairlady</label>
+                    </div> -->
+
+                    <!-- <h6 class="card-title ml-3 mt-3">Secretary</h6>
+                    <div class="md-form mt-3">
+                        <select class="mdb-select colorful-select dropdown-primary" name="secretary" required>
+                        <option value="No Candidate">No Candidate</option>
+                            <option value="Dorcas K Mendin">Dorcas K Mendin</option>
+                        </select>
+                        <label>Secretary</label>
+                    </div>
+
+                    <h6 class="card-title ml-3 mt-3">Academic Rep</h6>
+                    <div class="md-form mt-3">
+                        <select class="mdb-select colorful-select dropdown-primary" name="academic_rep" required>
+                            <option value="No Candidate">No Candidate</option>
+                            <option value="Ayotomiwa Promise">Ayotomiwa Promise</option>
+                        </select>
+                        <label>Academic Rep</label>
+                    </div>
+
+                    <h6 class="card-title ml-3 mt-3">Clubs and Societies</h6>
+                    <div class="md-form mt-3">
+                        <select class="mdb-select colorful-select dropdown-primary" name="clubs_rep" required>
+                            <option value="No Candidate">No Candidate</option>
+                            <option value="David Tago">David Tago</option>
+                        </select>
+                        <label>Clubs and Societies Rep</label>
+                    </div> -->
+
+                    <!-- <h6 class="card-title ml-3 mt-3">Entertainment</h6>
+                    <div class="md-form mt-3">
+                        <select class="mdb-select colorful-select dropdown-primary" name="entertainment_rep" required>
+                            <option value="No Candidate">No Candidate</option>
+                            <option value="Pape Abdul">Pape Abdul</option>
+                            <option value="Ashley Omondi">Ashley Omondi</option>
+                        </select>
+                        <label>Entertainment Rep</label>
+                    </div>
+
+                    <h6 class="card-title ml-3 mt-3">IT Rep</h6>
+                    <div class="md-form mt-3">
+                        <select class="mdb-select colorful-select dropdown-primary" name="it_rep" required>
+                            <option value="No Candidate">No Candidate</option>
+                            <option value="Gerry Migwi">Gerry Migwi</option>
+                        </select>
+                        <label>IT Rep</label>
+                    </div>
+
+                    <h6 class="card-title ml-3 mt-3">Sports Rep</h6>
+                    <div class="md-form mt-3">
+                        <select class="mdb-select colorful-select dropdown-primary" name="sports_rep" required>
+                            <option value="No Candidate">No Candidate</option>
+                            <option value="Dennis Mwangi">Dennis Mwangi</option>
+                            <option value="Kiinga Kioi">Kiinga Kioi</option>
+                        </select>
+                        <label>Sports Rep</label>
+                    </div> -->
+
+                    <!-- <h6 class="card-title ml-3 mt-3">Wellness</h6>
+                    <div class="md-form mt-3">
+                        <select class="mdb-select colorful-select dropdown-primary" name="wellness_rep" required>
+                            <option value="No Candidate">No Candidate</option>
+                            <option value="Tiyinoluwa Omotosho">Tiyinoluwa Omotosho</option>
+                            <option value="Ubongabasi Asuquo">Ubongabasi Asuquo</option>
+                        </select>
+                        <label>Wellness Rep</label>
+                    </div>
+
+                    <h6 class="card-title ml-3 mt-3">Treasurer</h6>
+                    <div class="md-form mt-3">
+                        <select class="mdb-select colorful-select dropdown-primary" name="treasurer" required>
+                            <option value="No Candidate">No Candidate</option>
+                            <option value="Jesse Mwangi">Jesse Mwangi</option>
+                        </select>
+                        <label>Treasurer</label>
+                    </div> -->
+
+                    <!-- <h6 class="card-title ml-3 mt-3">Honor Council</h6>
+                    <div class="md-form mt-3">
+                        <select class="mdb-select colorful-select dropdown-primary" name="honor_council" required>
+                            <option value="No Candidate">No Candidate</option>
+                            <option value="Jonathan Banza">Jonathan Banza</option>
+                        </select>
+                        <label>Honor Council</label>
+                    </div> -->
+
+                    <%if(moment().unix() < 1540574555
+                    ) {%>
+                        <button type="submit" class="btn btn-default btn-rounded my-3">Vote</button>
+                    <%} else {%>
+                        <p>Election over</p>
+                    <%}%>
+                    <!--Button goes here-->
+
+
+                    </div>
+                </form>
+            </div>
+            
+            <div class="col-md-12" id="myUL">
+                <div class="panel-body">
+                    <form id="search-members-form">
+                        <input type="text" id="search-members-input" style="margin-bottom: 10px; border-radius: 3px;" placeholder="Election Participants" class="form-control " onkeyup="myFunction()" id="myInput" >
+                    </form>
+                
+            
+                    <script>
+                    var searchMembersRoute = "http://kampasi.com/tools/search-members";
+                    var membersLoading = "http://kampasi.com/src/img/loading/rolling.gif";
+                    </script>
+                
+                    <style>
+                    #style-1::-webkit-scrollbar-track
+                    {
+                      border-radius: 10px;
+                      background-color: #bdc3c7;
+                    }
+                
+                    #style-1::-webkit-scrollbar
+                    {
+                      width: 8px;
+                      background-color: #F5F5F5;
+                    }
+                
+                    #style-1::-webkit-scrollbar-thumb
+                    {
+                      border-radius: 10px;
+                      background-color: #555;
+                    }
+                
+                    </style>
+                    <ul class="list-unstyled" id="style-1" style="overflow-y: auto; overflow-x: hidden; height: 400px;">
+                                <li>
+                        <div class="row">
+                          <div class="col-xs-2">
+                            <img class="img-circle" style="width: 50px; height: 50px;" src="/media/Gerry Migwi.jpg">
+                          </div><!-- .col-md-4 -->
+                          <div class="col-xs-8" style="text-align: left;">
+                           <p> <a href="http://kampasi.com/sriddle22">Mwangi</a></p>
+                                            <p>i wish i was a little taller i wish...</p>
+                          </div><!-- .col-md-8 -->
+                        </div><!-- .row -->
+                        <hr>
+                      </li>
+                                <li>
+                        <div class="row">
+                          <div class="col-xs-2">
+                            <img class="img-circle" style="width: 50px; height: 50px;" src="/media/Gerry Migwi.jpg">
+                          </div><!-- .col-md-4 -->
+                          <div class="col-xs-8" style="text-align: left;">
+                            <a href="http://kampasi.com/Nonhlanhla">Gerry</a>
+                                            <p>i wish i was a little taller i wish...</p>
+                          </div><!-- .col-md-8 -->
+                        </div><!-- .row -->
+                        <hr>
+                      </li>
+                                <li>
+                        <div class="row">
+                          <div class="col-xs-2">
+                            <img class="img-circle" style="width: 50px; height: 50px;" src="/media/Gerry Migwi.jpg">
+                          </div><!-- .col-md-4 -->
+                          <div class="col-xs-8" style="text-align: left;">
+                            <p> <a href="http://kampasi.com/bkelley@africanleadershipacademy.org">Gerry</a></p>
+                                            <p>i wish i was a little taller i wish...</p>
+                          </div><!-- .col-md-8 -->
+                        </div><!-- .row -->
+                        <hr>
+                      </li>
+                                <li>
+                        <div class="row">
+                          <div class="col-xs-2">
+                            <img class="img-circle" style="width: 50px; height: 50px;" src="/media/Gerry Migwi.jpg">
+                          </div><!-- .col-md-4 -->
+                          <div class="col-xs-8" style="text-align: left;">
+                            <a href="http://kampasi.com/Munir">Gerry</a>
+                                            <p>i wish i was a little taller i wish...</p>
+                          </div><!-- .col-md-8 -->
+                        </div><!-- .row -->
+                        <hr>
+                      </li>
+                                <li>
+                        <div class="row">
+                          <div class="col-xs-2">
+                            <img class="img-circle" style="width: 50px; height: 50px;" src="/media/Gerry Migwi.jpg">
+                          </div><!-- .col-md-4 -->
+                          <div class="col-xs-8" style="text-align: left;">
+                            <a href="http://kampasi.com/Mahomed%20Omar">Gerry</a>
+                                            <p>i wish i was a little taller i wish...</p>
+                          </div><!-- .col-md-8 -->
+                        </div><!-- .row -->
+                        <hr>
+                      </li>
+                               
+                               
+                                
+                                
+                    
+                  </div>
+                  </div>
+            
+        </div>
+        
+
+        <!-- //Election paticipants -->
+
+        
+         <!-- //Election paticipants -->
+        <!-- /Voting Panel Dropdown -->
+
+        <!-- Candidates Card Panel -->
+        <div class="col-md-8">
+             <!-- <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-10">
+                    <%if(currentUser.hash_id) {%>
+                        <p class="lead">This is your voting hash: <span class="badge pink"><%=currentUser.hash_id%></span></p>
+                    <%}%>
+                    <%if(moment().unix() > 1523808000) {%>
+                        <p class="lead">This is the overall voting hash: <span class="badge pink">fngreurh389u4e82h8e42q0s@</span></p>
+                    <%}%>
+                </div>
+            </div>  -->
+
+            <!-- Unhash Panel -->
+            <!-- Material auto-sizing form -->
+            <!-- <form action="/unhash" method="POST"> -->
+                <!-- Grid row -->
+                <!-- <div class="form-row text-center align-items-center"> -->
+                    <!-- Grid column -->
+                    <!-- <div class="col-md-6 float-right"> -->
+                        <!-- Material input -->
+                        <!-- <div class="md-form">
+                            <input type="text" name="hashId" class="form-control mb-2" id="inlineFormInputMD" placeholder="Input your voting hash">
+                            <label class="sr-only" for="inlineFormInputMD">Name</label>
+                        </div>
+                    </div> -->
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <!-- <div class="col-md-6 float-left">
+                        <button type="submit" class="btn btn-primary mb-0">Unhash</button>
+                    </div> -->
+                    <!-- Grid column -->
+                <!-- </div> -->
+                <!-- Grid row -->
+            <!-- </form> -->
+            <!-- Material auto-sizing form -->
+            <!-- /Unhash Panel -->
+
+            <p class="text-center lead mt-3">Chairman</p>
+            <!-- Grid row -->
+            <div class="row text-center pb-3">
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/Roli.jpg" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>Rolinhlanhla Ziny...</strong>
+                        </h5>
+                        <p class="grey-text">Chairman</p>
+                    </div>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/Adnan Kaka Shafi.jpg" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>Adnan Kaka Shafi</strong>
+                        </h5>
+                        <p class="grey-text">Chairman</p>
+                    </div>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/Jimcale Faarah.jpg" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>Jimcale Faarah</strong>
+                        </h5>
+                        <p class="grey-text">Chairman</p>
+                    </div>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/Henry Halliday.jpg" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>Henry Victor</strong>
+                        </h5>
+                        <p class="grey-text">Chairman</p>
+                    </div>
+                </div>
+                <!-- Grid column -->
+            </div>
+
+            <!-- <p class="text-center lead mt-3">Chairlady</p> -->
+            <!-- Grid row -->
+            <!-- <div class="row text-center pb-3"> -->
+                <!-- Grid column -->
+                <!-- <div class="col-lg-4 col-md-4 mb-4"> -->
+                    <!-- <div class="card card-body"> -->
+                        <!-- <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/Tania Twinoburyo.jpg" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold"> -->
+                            <!-- <strong>Tania Twinoburyo</strong>
+                        </h5>
+                        <p class="grey-text">Chairlady</p>
+                    </div>
+                </div> -->
+                <!-- Grid column -->
+            <!-- </div> -->
+
+            <!-- <p class="text-center lead mt-3">Academic Rep.</p>
+            <!Grid row -->
+            <!-- <div class="row text-center pb-3"> --> 
+                <!-- Grid column -->
+                <!-- <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/Ayotomiwa Promise Anuoluwapo Akinyele.jpg" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>Ayotomiwa Promise</strong>
+                        </h5>
+                        <p class="grey-text">Academic Rep.</p>
+                    </div>
+                </div> -->
+                <!-- Grid column -->
+            <!-- </div> -->
+<!-- 
+            <p class="text-center lead mt-3">Clubs & Societies Rep.</p> -->
+            <!-- Grid row -->
+            <!-- <div class="row text-center pb-3"> -->
+                <!-- Grid column -->
+                <!-- <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/ninja2.png" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>David Tago</strong>
+                        </h5>
+                        <p class="grey-text">Clubs & Societies Rep.</p>
+                    </div>
+                </div> -->
+                <!-- Grid column -->
+            <!-- </div> -->
+
+            <!-- <p class="text-center lead mt-3">Entertainment Rep.</p> -->
+            <!-- Grid row -->
+            <!-- <div class="row text-center pb-3"> -->
+                <!-- Grid column -->
+                <!-- <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/ninja.png" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>Pape Abdul</strong>
+                        </h5>
+                        <p class="grey-text">Entertainment Rep.</p>
+                    </div>
+                </div> -->
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <!-- <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/ninja3.png" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>Ashley Omondi</strong>
+                        </h5>
+                        <p class="grey-text">Entertainment Rep.</p>
+                    </div>
+                </div> -->
+                <!-- Grid column -->
+            <!-- </div>
+
+            <p class="text-center lead mt-3">IT Rep.</p> -->
+            <!-- Grid row -->
+            <!-- <div class="row text-center pb-3"> -->
+                <!-- Grid column -->
+                <!-- <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/Gerry Migwi.jpg" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>Gerry Migwi</strong>
+                        </h5>
+                        <p class="grey-text">IT Rep.</p>
+                    </div>
+                </div> -->
+                <!-- Grid column -->
+            <!-- </div> -->
+
+            <!-- <p class="text-center lead mt-3">Sports Rep.</p> -->
+            <!-- Grid row -->
+            <!-- <div class="row text-center pb-3"> -->
+                <!-- Grid column -->
+                <!-- <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/Kiinga Kioi.jpg" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>Kiinga Kiioi</strong>
+                        </h5>
+                        <p class="grey-text">Sports Rep.</p>
+                    </div>
+                </div> -->
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <!-- <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/Dennis Mwangi Kinyua.jpg" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>Dennis Mwangi</strong>
+                        </h5>
+                        <p class="grey-text">Sports Rep.</p>
+                    </div>
+                </div> -->
+                <!-- Grid column -->
+            <!-- </div> -->
+
+            <!-- <p class="text-center lead mt-3">Wellness Rep.</p>
+            <Grid row -->
+            <!-- <div class="row text-center pb-3"> -->
+                <!-- Grid column -->
+                <!-- <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/Tiyinoluwa Omotosho Olushola-Alao.jpg" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>Tiyinoluwa Omoto...</strong>
+                        </h5>
+                        <p class="grey-text">Wellness Rep.</p>
+                    </div> -->
+                <!-- </div> --> 
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <!-- <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/Ubongabasi.jpg" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>Ubongabasi Asuquo</strong>
+                        </h5>
+                        <p class="grey-text">Wellness Rep.</p>
+                    </div>
+                </div> -->
+                <!-- Grid column -->
+            <!-- </div>
+
+            <p class="text-center lead mt-3">Treasurer</p> -->
+            <!-- Grid row -->
+            <!-- <div class="row text-center pb-3">
+                 Grid column -->
+                <!-- <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/Jesse Forrester.jpg" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>Jesse Mwangi</strong>
+                        </h5>
+                        <p class="grey-text">Treasurer</p>
+                    </div>
+                </div> --> 
+                <!-- Grid column -->
+            <!-- </div> -->
+
+            <!-- <p class="text-center lead mt-3">Honor Council</p> -->
+            <!-- Grid row -->
+            <!-- <div class="row text-center pb-3"> -->
+                <!-- Grid column -->
+                <!-- <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card card-body">
+                        <div class="avatar mx-auto my-3">
+                            <img style="height : 100px !important; width : 100px !important; object-fit: cover !important;" src="/media/ninja2.png" class="rounded-circle img-fluid" alt="First sample avatar image">
+                        </div>
+                        <h5 class="font-weight-bold">
+                            <strong>Jonathan Banza</strong>
+                        </h5>
+                        <p class="grey-text">Honor Council</p>
+                    </div>
+                </div> -->
+                <!-- Grid column -->
+            <!-- </div> -->
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("search-members-input");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<% include partials/footer_z %>

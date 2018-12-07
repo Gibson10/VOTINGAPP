@@ -1,0 +1,59 @@
+<% include partials/header %>
+
+<%var ush = [];;%>
+<%for (var i = 0; i < userhash.length; i++) {%>
+    <%if(i < 4) {%>
+        <%userhash = setCharAt(userhash, i ,'x')%>
+    <%} else if (i == 5) {%>
+        <%ush.push(userhash);%>
+    <%}%>
+<%}%>
+
+<%function setCharAt(str,index,chr) {%>
+    <%if(index > str.length-1) return str;%>
+    <%return str.substr(0,index) + chr + str.substr(index+1);%>
+<%}%>
+
+<%var hashes = [];%>
+<%user_hashes.forEach(function(hash) {%>
+    <%for (var i = 0; i < hash.length; i++) {%>
+        <%if(i < 4) {%>
+            <%hash = setCharAt(hash, i ,'x')%>
+        <%} else if (i == 5) {%>
+            <%hashes.push(hash);%>
+        <%}%>
+    <%}%>
+    <%console.log(hashes)%>            
+<%})%>
+
+<div class="container my-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mb-3"></div>
+        <div class="col-lg-3 col-md-3 mb-3"></div>
+        <div class="col-lg-3 col-md-3 mb-3"></div>
+        <div class="col-lg-3 col-md-3 mb-3">
+            <div class="card card-body">
+                <h5 class="">Total votes : <%=hashes.length%></h5>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <%hashes.forEach(function(hash) {%>
+            <div class="col-lg-3 col-md-3 mb-3">
+                <div class="card card-body">
+                    <%if(hash == ush[0]) {%>
+                        <h5 class="text-danger">
+                            <%=hash%>
+                        </h5>
+                    <%} else {%>
+                        <h5 class="">
+                            <%=hash%>
+                        </h5>
+                    <%}%>
+                </div>
+            </div>
+        <%})%>
+    </div>
+</div>
+
+<% include partials/footer_h %>
