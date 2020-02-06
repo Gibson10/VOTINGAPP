@@ -12,8 +12,7 @@ var methodOverride = require("method-override"),
 var indexRoutes = require("./routes/index"),
     authRoutes  = require("./routes/auth");
 
-//mongodb://africanblockchaininitiative:Banana1@ds125335.mlab.com:25335/ala_election_db
-//mongodb://localhost/ala_elections
+
 mongoose.connect("mongodb://localhost/ala_elections");
 
 mongoose.Promise = global.Promise;
